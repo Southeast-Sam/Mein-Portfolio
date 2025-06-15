@@ -30,7 +30,7 @@ export default function Projects() {
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 150} // 150ms Verzögerung pro Block
-              className="bg-white/40 dark:bg-gray-500/60 backdrop-blur-sm p-6 rounded-xl shadow-md overflow-hidden transition-all hover:scale-102"
+              className="bg-white/40 dark:bg-gray-500/60 backdrop-blur-sm rounded-xl shadow-md p-6 overflow-hidden transition-all hover:scale-102"
             >
               <img
                 src={project.image}
