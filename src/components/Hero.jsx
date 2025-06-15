@@ -7,12 +7,14 @@ export default function Hero() {
       {/* Textbereich */}
       <div className="flex-1 space-y-6">
         <h1 className="text-2xl md:text-4xl font-extrabold">
-          <span className="text-blue-600 dark:text-blue-400">Nam Doan</span>
+          <span className="text-blue-600 dark:text-blue-400">
+            Hi, ich bin Nam
+          </span>
           <br />
-          Webentwickler & Designer
+          Ich bin ein Frontend-Entwickler
         </h1>
         <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300">
-          Ich entwickle moderne Webapps mit{" "}
+          Ich entwickle gerne moderne Webapps mit{" "}
           <span className="font-semibold text-blue-600 dark:text-blue-400">
             React
           </span>
