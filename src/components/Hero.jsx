@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col mt-28 md:flex-row md:mt-0 justify-center items-center text-center md:text-left px-8 bg-gradient-to-b from-white to-blue-300 dark:from-gray-900 dark:to-gray-800"
+      className="min-h-screen flex flex-col mt-28 md:flex-row md:mt-0 justify-center items-center text-center md:text-left px-8 "
     >
       {/* Textbereich */}
       <div className="flex-1 space-y-6">
