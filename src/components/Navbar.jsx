@@ -40,7 +40,7 @@ export default function Navbar() {
       <div className=" bg-white/40 dark:bg-gray-500/60 backdrop-blur-sm rounded-full max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
         {/* Logo */}
         <div className="text-xl ml-4 font-bold bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
-          Nam.dev
+          Nam
         </div>
 
         {/* Desktop Nav */}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaDownload, FaGraduationCap } from "react-icons/fa";
+import Profilbild2 from "../assets/Images/Profilbild2.jpeg";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("skills");
@@ -8,26 +9,21 @@ export default function About() {
     { name: "HTML", percent: 90, color: "bg-[#00f5a0]" },
     { name: "CSS", percent: 75, color: "bg-[#00f5a0]" },
     { name: "JavaScript", percent: 80, color: "bg-[#00f5a0]" },
-    { name: "React", percent: 70, color: "bg-[#00f5a0]" },
+    { name: "React", percent: 80, color: "bg-[#00f5a0]" },
     { name: "Tailwind", percent: 80, color: "bg-[#00f5a0]" },
     { name: "Python", percent: 40, color: "bg-[#00f5a0]" },
   ];
 
   const education = [
     {
-      year: "2000 – 2000",
-      title: "Academic Degree",
-      desc: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+      year: "05.2016 – 07.2021",
+      title: "Realschule",
+      desc: "Abschluss: Mittlere Reife",
     },
     {
-      year: "2000 – 2000",
-      title: "Academic Degree",
-      desc: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
-    },
-    {
-      year: "2000 – 2000",
-      title: "Academic Degree",
-      desc: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+      year: "09.2021 – 07.2024",
+      title: "Technisches Gymnasium (Schwerpunkt Mechatronik)",
+      desc: "Abschluss: Schulischer Teil der Fachhochschulreife.",
     },
   ];
 
@@ -41,15 +37,19 @@ export default function About() {
 
         <div className="max-w-4xl mx-auto w-full flex flex-col md:flex-row items-center gap-6 md:gap-10 px-2 md:px-4 py-6 md:py-12 mb-16">
           <img
-            src="https://avatars.githubusercontent.com/u/9919?s=280&v=4"
+            src={Profilbild2}
             alt="Profilbild"
-            className="w-36 h-36 md:w-48 md:h-48 rounded-full shadow-lg object-cover"
+            className="w-44 h-64 mx-auto rounded-full shadow-lg object-cover"
           />
           <div className="w-full bg-white/40 dark:bg-gray-500/60 backdrop-blur-md rounded-3xl p-4 md:p-6">
-            <p className="text-base md:text-lg mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              eget risus vitae massa semper aliquam quis mattis quam.
-              Suspendisse potenti.
+            <p className="text-base text-justify md:text-lg mb-6">
+              Ich bin Nam, ein Junior Frontend-Entwickler aus Löffingen. Ich
+              entwickle gerne Webseiten, die nicht nur funktionieren, sondern
+              auch gut aussehen - ich nutze dabei am liebsten React und Tailwind
+              CSS. Ich habe mir das alles selbst beigebracht. Inzwischen macht's
+              mir richtig Spaß, Ideen umzusetzen und Dinge einfach mal
+              auszuprobieren. Ich bin noch nicht am Ziel, aber auf dem Weg,
+              jeden Tag besser zu werden.
             </p>
             <a
               href="/CV_2025.pdf"
@@ -63,15 +63,15 @@ export default function About() {
       </section>
 
       {/* Tabs */}
-      <div className="max-w-4xl mx-auto mb-20 ml-4 flex gap-6 text-xl">
+      <div className="max-w-4xl mx-auto mb-20 ml-4 flex gap-6 text-xl ">
         {["skills", "education"].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`pb-2 font-medium capitalize transition ${
               activeTab === tab
-                ? "border-b-2 border-blue-500 text-gray-800"
-                : "text-gray-400 hover:text-white"
+                ? "border-b-2 border-blue-500 text-gray-800 dark:text-white"
+                : "text-gray-400 hover:text-white cursor-pointer"
             }`}
           >
             {tab}

@@ -43,12 +43,6 @@ export default function Services() {
               <p className="text-sm dark:text-white mb-4">
                 {service.description}
               </p>
-              <a
-                href="#"
-                className="text-sm font-medium text-blue-500 group-hover:text-white underline underline-offset-2 transition duration-300"
-              >
-                Mehr erfahren
-              </a>
             </div>
           ))}
         </div>

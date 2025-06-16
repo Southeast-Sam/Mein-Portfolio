@@ -15,16 +15,16 @@ export default function Contacts() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <FaEnvelope className="text-blue-500" />
-                <span className="text-sm">contact@example.com</span>
+                <span className="text-sm">nam.nhat2003@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <FaPhone className="text-blue-500" />
-                <span className="text-sm">0123456789</span>
+                <span className="text-sm">+49 1623247902</span>
               </div>
             </div>
 
             {/* Social Icons */}
-            <div className="flex gap-6 text-2xl text-white">
+            <div className="flex gap-6 text-2xl text-black dark:text-blue-500">
               <a
                 href="https://instagram.com/deinProfil"
                 target="_blank"
@@ -34,7 +34,7 @@ export default function Contacts() {
                 <FaInstagram />
               </a>
               <a
-                href="https://github.com/deinGithub"
+                href="https://github.com/Southeast-Sam"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-500 hover:animate-bounce transition"
@@ -45,27 +45,37 @@ export default function Contacts() {
           </div>
 
           {/* Rechte Seite: Formular */}
-          <form className="space-y-6">
+          <form
+            action="https://formspree.io/f/mvgrrngg"
+            method="POST"
+            className="space-y-6"
+          >
             <input
               type="text"
-              placeholder="Your Name"
-              className="w-full p-3 bg-white/30 dark:bg-gray-500/60 backdrop-blur-sm rounded-3xl text-black dark:text-white placeholder-gray-400 focus:outline-none"
+              name="name"
+              placeholder="Dein Name"
+              required
+              className="w-full p-3 bg-white/50 dark:bg-gray-500/60 backdrop-blur-md rounded-3xl text-black dark:text-white placeholder-gray-400 focus:outline-none"
             />
             <input
               type="email"
-              placeholder="Your Email"
-              className="w-full p-3 bg-white/30 dark:bg-gray-500/60 backdrop-blur-sm rounded-3xl text-black dark:text-white placeholder-gray-400 focus:outline-none"
+              name="email"
+              placeholder="Deine E-mail"
+              required
+              className="w-full p-3 bg-white/50 dark:bg-gray-500/60 backdrop-blur-md rounded-3xl text-black dark:text-white placeholder-gray-400 focus:outline-none"
             />
             <textarea
-              placeholder="Your Message"
+              name="message"
+              placeholder="Deine Nachricht"
               rows="5"
-              className="w-full p-3 bg-white/30 dark:bg-gray-500/60 backdrop-blur-sm rounded-3xl text-black dark:text-white placeholder-gray-400 focus:outline-none resize-none"
+              required
+              className="w-full p-3 bg-white/50 dark:bg-gray-500/60 backdrop-blur-md rounded-3xl text-black dark:text-white placeholder-gray-400 focus:outline-none resize-none"
             ></textarea>
             <button
               type="submit"
               className="bg-blue-500 text-white font-bold px-6 py-3 rounded-md shadow hover:scale-105 transition"
             >
-              Submit
+              Nachricht senden
             </button>
           </form>
         </div>
