@@ -127,6 +127,8 @@ export default function About() {
                 {services.map((service, index) => (
                   <div
                     key={index}
+                    data-aos="fade-down"
+                    data-aos-delay={index * 150}
                     className="group bg-white/10 dark:bg-white/10 backdrop-blur-lg p-6 rounded-3xl shadow-lg hover:shadow-xl hover:scale-105 hover:bg-blue-500 transition-all duration-300"
                   >
                     <div className="mb-4 text-blue-500 group-hover:text-white transition duration-300">

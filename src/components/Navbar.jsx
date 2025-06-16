@@ -30,7 +30,6 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "#hero" },
     { name: "Über mich", href: "#about" },
-    { name: "Services", href: "#services" },
     { name: "Projekte", href: "#projects" },
     { name: "Kontakt", href: "#contact" },
   ];

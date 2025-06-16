@@ -5,7 +5,8 @@ export default function Projects() {
   const projects = [
     {
       title: "OptiCut",
-      description: "Zeigt aktuelle Wetterdaten mithilfe einer externen API.",
+      description:
+        "Ein Tool zur Zuschnitt-Optimierung für Plattenmaterialien. Nutzereingaben werden automatisch visualisiert, um Verschnitt zu reduzieren. Die Platzierung erfolgt dynamisch - inklusive Rotation, Lückenfüllung und PDF-Export.",
       image: OptiCut,
       demoLink: "https://stunning-paletas-4aefea.netlify.app",
       codeLink:
@@ -13,7 +14,8 @@ export default function Projects() {
     },
     {
       title: "WetterKit",
-      description: "Zeigt aktuelle Wetterdaten mithilfe einer externen API.",
+      description:
+        "Eine moderne Wetter-App mit Forecast, Hintergrundbild und Live-Daten. Die Daten stammen von einer externen API und werden visuell aufbereitet – inkl. Sonnenzeiten, Temperatur, Wind, Icons und Wochentagen.",
       image: WetterKit,
       demoLink: "https://glittery-rabanadas-8efc0c.netlify.app",
       codeLink: "https://github.com/Southeast-Sam/Wetterkit/tree/main/src",

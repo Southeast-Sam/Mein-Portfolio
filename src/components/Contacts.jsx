@@ -26,7 +26,7 @@ export default function Contacts() {
             {/* Social Icons */}
             <div className="flex gap-6 text-2xl text-black dark:text-blue-500">
               <a
-                href="https://instagram.com/deinProfil"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-500 hover:animate-bounce transition"
