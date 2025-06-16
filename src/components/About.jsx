@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaDownload, FaGraduationCap } from "react-icons/fa";
+import { FaDownload, FaGraduationCap, FaCode, FaFigma } from "react-icons/fa";
 import Profilbild2 from "../assets/Images/Profilbild2.jpeg";
 
 export default function About() {
@@ -12,6 +12,25 @@ export default function About() {
     { name: "React", percent: 80, color: "bg-[#00f5a0]" },
     { name: "Tailwind", percent: 80, color: "bg-[#00f5a0]" },
     { name: "Python", percent: 40, color: "bg-[#00f5a0]" },
+  ];
+
+  const services = [
+    {
+      title: "Web Entwicklung",
+      description:
+        "Moderne, responsive Webseiten mit Fokus auf Performance, Design und Benutzerfreundlichkeit.",
+      icon: (
+        <FaCode size={30} className="text-blue-500 group-hover:text-white" />
+      ),
+    },
+    {
+      title: "UI/UX Design",
+      description:
+        "Klares, nutzerzentriertes Design mit Liebe zum Detail. Vom Wireframe bis zur interaktiven Oberfläche.",
+      icon: (
+        <FaFigma size={30} className="text-blue-500 group-hover:text-white" />
+      ),
+    },
   ];
 
   const education = [
@@ -82,7 +101,7 @@ export default function About() {
       {/* Skills */}
       {activeTab === "skills" && (
         <section className="w-full px-2 md:px-4 pb-12" data-aos="zoom-in-up">
-          <div className="max-w-4xl mx-auto bg-white/40 dark:bg-gray-500/60 backdrop-blur-md rounded-3xl w-full px-4 py-6 space-y-6">
+          <div className="max-w-4xl mx-auto bg-white/40 dark:bg-gray-500/60 backdrop-blur-md rounded-3xl w-full px-4 py-6 space-y-10">
             {skills.map((skill) => (
               <div key={skill.name}>
                 <div className="flex justify-between">
@@ -101,6 +120,28 @@ export default function About() {
                 </div>
               </div>
             ))}
+
+            {/* Services Zusatz */}
+            <div className="pt-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {services.map((service, index) => (
+                  <div
+                    key={index}
+                    className="group bg-white/10 dark:bg-white/10 backdrop-blur-lg p-6 rounded-3xl shadow-lg hover:shadow-xl hover:scale-105 hover:bg-blue-500 transition-all duration-300"
+                  >
+                    <div className="mb-4 text-blue-500 group-hover:text-white transition duration-300">
+                      {service.icon}
+                    </div>
+                    <h4 className="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-white">
+                      {service.title}
+                    </h4>
+                    <p className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-white">
+                      {service.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       )}

@@ -5,7 +5,7 @@ export default function Contacts() {
     <div className="p-4">
       <section id="contact" className="px-4 py-20">
         <h2 className="text-4xl font-extrabold mb-16 text-left">
-          Contact <span className="text-blue-500">Me</span>
+          Kontaktiere <span className="text-blue-500">mich</span>
         </h2>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -48,6 +48,7 @@ export default function Contacts() {
           <form
             action="https://formspree.io/f/mvgrrngg"
             method="POST"
+            onSubmit={() => alert("Deine Nachricht wurde gesendet✅")}
             className="space-y-6"
           >
             <input

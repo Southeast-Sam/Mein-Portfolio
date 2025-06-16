@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contacts from "./components/Contacts";
-import Services from "./components/Services";
 
 function App() {
   return (
@@ -12,9 +11,6 @@ function App() {
       <Hero />
       <section id="about" className="min-h-[50vh] scroll-mt-20">
         <About />
-      </section>
-      <section id="services" className="min-h-screen scroll-mt-20">
-        <Services />
       </section>
       <section id="projects" className="min-h-screen scroll-mt-20">
         <Projects />
