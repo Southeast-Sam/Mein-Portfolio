@@ -19,7 +19,7 @@ function adjustFontSize() {
 
   if (isSafari) {
     console.log("Safari erkannt – Schriftgröße auf 18px gesetzt.");
-    document.documentElement.style.fontSize = "18px";
+    document.documentElement.style.fontSize = "20px";
   } else if (isChrome) {
     console.log("Chrome erkannt – Schriftgröße auf 130% gesetzt.");
     document.documentElement.style.fontSize = "130%";
