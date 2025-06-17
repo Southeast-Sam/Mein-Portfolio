@@ -25,6 +25,7 @@ export default function Contacts() {
 
             {/* Social Icons */}
             <div className="flex gap-6 text-2xl text-black dark:text-blue-500">
+              {/* 
               <a
                 href="#"
                 target="_blank"
@@ -32,7 +33,7 @@ export default function Contacts() {
                 className="hover:text-blue-500 hover:animate-bounce transition"
               >
                 <FaInstagram />
-              </a>
+              </a>*/}
               <a
                 href="https://github.com/Southeast-Sam"
                 target="_blank"
@@ -61,7 +62,7 @@ export default function Contacts() {
             <input
               type="email"
               name="email"
-              placeholder="Deine E-mail"
+              placeholder="Deine E-Mail"
               required
               className="w-full p-3 bg-white/50 dark:bg-gray-500/60 backdrop-blur-md rounded-3xl text-black dark:text-white placeholder-gray-400 focus:outline-none"
             />

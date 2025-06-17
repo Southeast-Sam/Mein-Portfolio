@@ -15,8 +15,8 @@ export default function About() {
   const skills = [
     { name: "HTML", percent: 90, color: "bg-[#00f5a0]" },
     { name: "CSS", percent: 75, color: "bg-[#00f5a0]" },
-    { name: "JavaScript", percent: 80, color: "bg-[#00f5a0]" },
-    { name: "React", percent: 80, color: "bg-[#00f5a0]" },
+    { name: "JavaScript", percent: 70, color: "bg-[#00f5a0]" },
+    { name: "React", percent: 70, color: "bg-[#00f5a0]" },
     { name: "Tailwind", percent: 80, color: "bg-[#00f5a0]" },
     { name: "Python", percent: 40, color: "bg-[#00f5a0]" },
   ];
@@ -35,7 +35,7 @@ export default function About() {
       description:
         "Klares, nutzerzentriertes Design mit Liebe zum Detail. Vom Wireframe bis zur interaktiven Oberfläche.",
       icon: (
-        <FaFigma size={30} className="text-blue-500 group-hover:text-white" />
+        <FaFigma size={28} className="text-blue-500 group-hover:text-white" />
       ),
     },
   ];
@@ -69,14 +69,16 @@ export default function About() {
           />
           <div className="w-full bg-white/40 dark:bg-gray-500/60 backdrop-blur-md rounded-3xl p-4 md:p-6">
             <p className="text-base text-justify md:text-lg mb-6">
-              Ich bin Nam, ein Junior Frontend-Entwickler aus Löffingen. Ich
-              entwickle gerne Webseiten, die nicht nur funktionieren, sondern
-              auch gut aussehen - ich nutze dabei am liebsten React und Tailwind
-              CSS. Ich habe mir das alles selbst beigebracht. Inzwischen macht's
-              mir richtig Spaß, Ideen umzusetzen und Dinge einfach mal
+              Ich bin Nam, ein selbstlernender Entwickler aus Löffingen und
+              aktuell auf dem Weg, Frontend-Entwickler zu werden. Ich entwickle
+              gerne Webseiten, die nicht nur funktionieren, sondern auch gut
+              aussehen - dabei nutze ich am liebsten React und Tailwind CSS. Ich
+              habe mir das alles selbst beigebracht. Inzwischen macht es mir
+              richtig Spaß, Ideen umzusetzen und Dinge einfach mal
               auszuprobieren. Ich bin noch nicht am Ziel, aber auf dem Weg,
               jeden Tag besser zu werden.
             </p>
+
             <a
               href="/CV_2025.pdf"
               download
