@@ -8,13 +8,5 @@ body {
 
 html {
   font-size: 17px; /* Global */
-  -webkit-text-size-adjust: 100%; /* Safari */
-}
-
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) {
-    html {
-      font-size: 20px;
-    }
-  }
+  -webkit-text-size-adjust: 120%; /* Safari */
 }
