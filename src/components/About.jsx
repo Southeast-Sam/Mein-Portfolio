@@ -80,7 +80,7 @@ export default function About() {
             </p>
 
             <a
-              href="/CV_2025.pdf"
+              href="/public/Lebenslauf.pdf"
               download
               className="inline-flex items-center gap-2 px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow hover:scale-102 active:scale-98 transition"
             >
