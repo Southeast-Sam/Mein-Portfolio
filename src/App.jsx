@@ -1,25 +1,34 @@
+import { useEffect } from "react";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contacts from "./components/Contacts";
-import { useEffect } from "react";
 
-function adjustFontSizeForChrome() {
+function adjustFontSize() {
+  const userAgent = navigator.userAgent;
+  const vendor = navigator.vendor;
+
+  const isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
+
   const isChrome =
-    /Chrome/.test(navigator.userAgent) &&
-    /Google Inc/.test(navigator.vendor) &&
-    !/Edg/.test(navigator.userAgent) && // Edge ausschließen
-    !/OPR/.test(navigator.userAgent);
-  if (isChrome) {
-    console.log("Chrome erkannt - Schrift Größe angepasst.");
+    /Chrome/.test(userAgent) &&
+    /Google Inc/.test(vendor) &&
+    !/Edg/.test(userAgent) &&
+    !/OPR/.test(userAgent);
+
+  if (isSafari) {
+    console.log("Safari erkannt – Schriftgröße auf 18px gesetzt.");
+    document.documentElement.style.fontSize = "18px";
+  } else if (isChrome) {
+    console.log("Chrome erkannt – Schriftgröße auf 130% gesetzt.");
     document.documentElement.style.fontSize = "130%";
   }
 }
 
 function App() {
   useEffect(() => {
-    adjustFontSizeForChrome();
+    adjustFontSize();
   }, []);
 
   return (
