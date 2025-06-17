@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaDownload, FaGraduationCap, FaCode, FaFigma } from "react-icons/fa";
 import Profilbild2 from "../assets/Images/Profilbild2.jpeg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("skills");
+
+  useEffect(() => {
+    AOS.init({ once: true });
+    AOS.refresh();
+  }, []);
 
   const skills = [
     { name: "HTML", percent: 90, color: "bg-[#00f5a0]" },
@@ -54,7 +61,7 @@ export default function About() {
           Über mich
         </h2>
 
-        <div className="max-w-4xl mx-auto w-full flex flex-col md:flex-row items-center gap-6 md:gap-10 px-2 md:px-4 py-6 md:py-12 mb-16">
+        <div className="w-full px-4 max-w-screen mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10 md:px-4 py-6 md:py-12 mb-16">
           <img
             src={Profilbild2}
             alt="Profilbild"
@@ -100,8 +107,8 @@ export default function About() {
 
       {/* Skills */}
       {activeTab === "skills" && (
-        <section className="w-full px-2 md:px-4 pb-12" data-aos="zoom-in-up">
-          <div className="max-w-4xl mx-auto bg-white/40 dark:bg-gray-500/60 backdrop-blur-md rounded-3xl w-full px-4 py-6 space-y-10">
+        <section className="w-full px-2 md:px-16 pb-12" data-aos="zoom-in-up">
+          <div className="px-4 max-w-screen mx-auto bg-white/40 dark:bg-gray-500/60 backdrop-blur-md rounded-3xl w-full py-6 space-y-10">
             {skills.map((skill) => (
               <div key={skill.name}>
                 <div className="flex justify-between">
@@ -150,31 +157,33 @@ export default function About() {
 
       {/* Education Timeline */}
       {activeTab === "education" && (
-        <section className="max-w-4xl mx-auto pl-4 border-l-5 rounded-sm border-[#00f5a0] space-y-10">
-          {education.map((item, index) => (
-            <div
-              key={index}
-              className="relative pl-6"
-              data-aos="fade-up"
-              data-aos-delay={index * 200}
-            >
-              <div className="absolute -left-6 top-3 bg-blue-400 p-2 rounded-full text-black">
-                <FaGraduationCap size={18} />
+        <div className="pl-4">
+          <section className="px-16 max-w-screen w-full mx-auto pl-3 border-l-5 rounded-sm border-[#00f5a0] space-y-10">
+            {education.map((item, index) => (
+              <div
+                key={index}
+                className="relative pl-6"
+                data-aos="fade-up"
+                data-aos-delay={index * 300}
+              >
+                <div className="absolute -left-6 top-3 bg-blue-400 p-2 rounded-full text-black">
+                  <FaGraduationCap size={18} />
+                </div>
+                <div className="bg-white/40 dark:bg-gray-500/60 backdrop-blur-md rounded-3xl w-full p-4 ">
+                  <p className="text-sm text-gray-700 dark:text-gray-200">
+                    {item.year}
+                  </p>
+                  <h3 className="text-lg font-bold text-gray-700 dark:text-white">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
-              <div className="bg-white/40 dark:bg-gray-500/60 backdrop-blur-md rounded-3xl w-full p-4 ">
-                <p className="text-sm text-gray-700 dark:text-gray-200">
-                  {item.year}
-                </p>
-                <h3 className="text-lg font-bold text-gray-700 dark:text-white">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  {item.desc}
-                </p>
-              </div>
-            </div>
-          ))}
-        </section>
+            ))}
+          </section>
+        </div>
       )}
     </div>
   );

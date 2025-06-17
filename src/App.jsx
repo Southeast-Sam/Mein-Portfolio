@@ -3,8 +3,25 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contacts from "./components/Contacts";
+import { useEffect } from "react";
+
+function adjustFontSizeForChrome() {
+  const isChrome =
+    /Chrome/.test(navigator.userAgent) &&
+    /Google Inc/.test(navigator.vendor) &&
+    !/Edg/.test(navigator.userAgent) && // Edge ausschließen
+    !/OPR/.test(navigator.userAgent);
+  if (isChrome) {
+    console.log("Chrome erkannt - Schrift Größe angepasst.");
+    document.documentElement.style.fontSize = "130%";
+  }
+}
 
 function App() {
+  useEffect(() => {
+    adjustFontSizeForChrome();
+  }, []);
+
   return (
     <>
       <Navbar />
