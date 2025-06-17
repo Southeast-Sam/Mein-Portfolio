@@ -1,5 +1,5 @@
 import WetterKit from "../assets/Images/WetterKit.png";
-import OptiCut from "../assets/Images/opticut.png";
+import OptiCutImg from "../assets/Images/Opticut.png";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -15,7 +15,7 @@ export default function Projects() {
       title: "OptiCut",
       description:
         "Ein Tool zur Zuschnitt-Optimierung für Plattenmaterialien. Nutzereingaben werden automatisch visualisiert, um Verschnitt zu reduzieren. Die Platzierung erfolgt dynamisch - inklusive Rotation, Lückenfüllung und PDF-Export.",
-      image: OptiCut,
+      image: OptiCutImg,
       demoLink: "https://stunning-paletas-4aefea.netlify.app",
       codeLink:
         "https://github.com/Southeast-Sam/OptiCut-Zuschnittplaner?tab=readme-ov-file",
