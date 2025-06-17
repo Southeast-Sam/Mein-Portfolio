@@ -1,6 +1,6 @@
 # Mein Portfolio
 
-🔗 **Live ansehen:** [nam-portfolio.netlify.app](https://super-chebakia-596e60.netlify.app)
+🔗 **Live ansehen:** [Mein-Portfolio](https://super-chebakia-596e60.netlify.app)
 
 Willkommen zu meinem persönlichen Portfolio - einer Sammlung meiner Webprojekte, die ich im Rahmen meines Selsbtstudiums als Frontend-Entwickler mit Fokus auf React, Tailwind CSS und modernen Technologien umgesetzt habe.
 
