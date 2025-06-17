@@ -14,7 +14,7 @@ html {
 @media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
     html {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 }
