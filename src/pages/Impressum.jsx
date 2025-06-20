@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Impressum() {
   return (
-    <div className="max-w-2xl mx-auto p-8 bg-blue-100 h-screen">
+    <div className="max-w-2xl mx-auto p-8">
       <h1 className="text-2xl font-bold mb-4">Impressum</h1>
       <p>
         <strong>Angaben gemäß § 5 TMG:</strong>
