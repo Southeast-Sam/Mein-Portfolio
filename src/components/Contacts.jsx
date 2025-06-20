@@ -1,4 +1,4 @@
-import { FaEnvelope, FaPhone, FaInstagram, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaGithub } from "react-icons/fa";
 
 export default function Contacts() {
   return (

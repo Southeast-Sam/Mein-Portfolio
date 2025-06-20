@@ -4,13 +4,15 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contacts from "./components/Contacts";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Impressum from "./pages/Impressum.jsx";
+import Datenschutz from "./pages/Datenschutz.jsx";
+import Footer from "./components/Footer.jsx";
 
 function adjustFontSize() {
   const userAgent = navigator.userAgent;
   const vendor = navigator.vendor;
-
   const isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
-
   const isChrome =
     /Chrome/.test(userAgent) &&
     /Google Inc/.test(vendor) &&
@@ -32,19 +34,31 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <section id="about" className="min-h-[50vh] scroll-mt-20">
-        <About />
-      </section>
-      <section id="projects" className="min-h-screen scroll-mt-20">
-        <Projects />
-      </section>
-      <section id="contact" className="min-h-screen scroll-mt-20">
-        <Contacts />
-      </section>
-    </>
+    <Routes>
+      {/* Startseite (One Page) */}
+      <Route
+        path="/"
+        element={
+          <>
+            <Navbar />
+            <Hero />
+            <section id="about" className="min-h-[50vh] scroll-mt-20">
+              <About />
+            </section>
+            <section id="projects" className="min-h-screen scroll-mt-20">
+              <Projects />
+            </section>
+            <section id="contact" className="min-h-screen scroll-mt-20">
+              <Contacts />
+            </section>
+            <Footer />
+          </>
+        }
+      />
+      {/* Impressum + Datenschutz */}
+      <Route path="/impressum" element={<Impressum />} />
+      <Route path="/datenschutz" element={<Datenschutz />} />
+    </Routes>
   );
 }
 
